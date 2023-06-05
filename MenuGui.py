@@ -1,12 +1,6 @@
 import tkinter as tk
 import pyautogui
 
-def atualizar_posicao():
-    x, y = pyautogui.position()
-    entry_posicao.delete(0, tk.END)
-    entry_posicao.insert(0, f'X: {x} Y: {y}')
-    root.after(100, atualizar_posicao)
-
 def abrir_opcao1():
     print("Opção 1 selecionada")
     
@@ -49,13 +43,6 @@ label_num2.pack()
 
 entry_num2 = tk.Entry(root)
 entry_num2.pack()
-
-label_num3 = tk.Label(root, text="Posicao x e y:")
-label_num3.pack()
-
-entry_posicao = tk.Entry(root)
-entry_posicao.pack()
-atualizar_posicao()
 
 
 root.mainloop()
